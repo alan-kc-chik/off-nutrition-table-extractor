@@ -2,6 +2,7 @@ nutrition_extractor/data/ctpn.pb
 data/ctpn.pb
 nutrition_extractor/__pycache__/*
 nutrition_extractor/lib/__pycache__/*
+nutrition_extractor/lib/*/__pycache__/*
 off-nutrition-table-extractor/__pycache__/*
 nutrition_extractor/utils/__pycache__/*
 api/__pycache__/*
