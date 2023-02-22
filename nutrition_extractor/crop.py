@@ -14,10 +14,10 @@ def crop(image_obj, coords, saved_location, extend_ratio=0, SAVE=False):
     ny = image_obj.shape[0]
 
     modified_coords = (
-        int(coords[0]-extend_ratio*nx), 
-        int(coords[1]-extend_ratio*ny), 
-        int(coords[2]+extend_ratio*nx), 
-        int(coords[3]+extend_ratio*ny)
+        max(0,int(coords[0]-extend_ratio*nx)), 
+        max(0,int(coords[1]-extend_ratio*ny)), 
+        min(int(coords[2]+extend_ratio*nx),nx), 
+        min(int(coords[3]+extend_ratio*ny),ny)
     )
     # cropped_image = image_obj.crop(modified_coords)
     cropped_image = image_obj[modified_coords[1]:modified_coords[3], modified_coords[0]:modified_coords[2]]

@@ -39,6 +39,7 @@ def ocr(img, oem=1, psm=3):
 
     try:
         img = Image.fromarray(img)
+        pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
         text = pytesseract.image_to_string(img, config=config)
 
         return text

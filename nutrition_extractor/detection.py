@@ -94,7 +94,7 @@ def detect(img_path, debug):
                     'string_type': string_type(text)
                 }
                 text_location_list.append(new_location)
-
+    
     #Spatial algorithm that maps all boxes according to their location and append the string
     for text_dict in text_location_list:
         if(text_dict['string_type']==2):
