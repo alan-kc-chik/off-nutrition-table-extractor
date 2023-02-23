@@ -45,17 +45,13 @@ Add the Tesseract installation root folder to PATH. The folder should contain `t
 Navigate to the root directory of this repo. Please first create a virtual environment with Python 3.7.
 `virtualenv venv --python python3.7'
 
+Activate the virtual environment. On Windows, run `venv\Scripts\activate.bat` from inside `off-nutrition-table-extractor` folder.
+
 Confirm that you are in the virtual environment by running:
-`python --version`
-It should read Python 3.7.x
+- `python --version` It should read Python 3.7.x
+- `pip list` It should only have a few base packages included.
 
 Install the required packages using `pip install -r requirements.txt`.
-Navigate to nutrition_extractor: `cd nutrition_extractor`
-
-Detect an image (replace the input and output paths if needed).
-- Run `python detect_to_file.py -i ./test_images/test.jpg -o output.txt`
-- Check the results in `output.txt`
-
 ---------------------------
 The code is compatible with Python 3.7. If you find any other dependency required during the execution, do raise an issue and inform there. 
 ```
@@ -72,7 +68,10 @@ The code is compatible with Python 3.7. If you find any other dependency require
 - Download the frozen model for ctpn from [here](https://github.com/eragonruan/text-detection-ctpn/releases/download/untagged-48d74c6337a71b6b5f87/ctpn.pb).
 - Save the model in `./nutrition_extractor/data` repository.
 - Make a directory named `test_images` and put the images in that folder.
+
 - run `python detection.py -i [IMAGE-PATH]` from inside nutrition_extractor folder.
+- For printing results to text file instead, run: `python detect_to_file.py -i ./test_images/test.jpg -o output.txt`
+
 
 ## Planned functionality
 - [x] Develop a table detection model to extract the region of interest (nutritional facts table) from images.
