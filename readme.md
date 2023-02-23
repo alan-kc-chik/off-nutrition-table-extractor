@@ -39,7 +39,25 @@ Nutritional content = {
 ```
 
 ## Requirements
-The code is compatible with Python 3.0+. If you find any other dependency required during the execution, do raise an issue and inform there. 
+Prerequisite: install Tesseract. (https://tesseract-ocr.github.io/tessdoc/Installation.html)
+Add the Tesseract installation root folder to PATH. The folder should contain `tesseract.exe`.
+
+Navigate to the root directory of this repo. Please first create a virtual environment with Python 3.7.
+`virtualenv venv --python python3.7'
+
+Confirm that you are in the virtual environment by running:
+`python --version`
+It should read Python 3.7.x
+
+Install the required packages using `pip install -r requirements.txt`.
+Navigate to nutrition_extractor: `cd nutrition_extractor`
+
+Detect an image (replace the input and output paths if needed).
+- Run `python detect_to_file.py -i ./test_images/test.jpg -o output.txt`
+- Check the results in `output.txt`
+
+---------------------------
+The code is compatible with Python 3.7. If you find any other dependency required during the execution, do raise an issue and inform there. 
 ```
 1. Tensorflow
 2. OpenCV
