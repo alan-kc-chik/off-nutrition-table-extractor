@@ -52,7 +52,6 @@ Confirm that you are in the virtual environment by running:
 - `pip list` It should only have a few base packages included.
 
 Install the required packages using `pip install -r requirements.txt`.
----------------------------
 The code is compatible with Python 3.7. If you find any other dependency required during the execution, do raise an issue and inform there. 
 ```
 1. Tensorflow
