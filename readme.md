@@ -43,7 +43,7 @@ Prerequisite: install Tesseract. (https://tesseract-ocr.github.io/tessdoc/Instal
 Add the Tesseract installation root folder to PATH. The folder should contain `tesseract.exe`.
 
 Navigate to the root directory of this repo. Please first create a virtual environment with Python 3.7.
-`virtualenv venv --python python3.7'
+`virtualenv venv --python python3.7`
 
 Activate the virtual environment. On Windows, run `venv\Scripts\activate.bat` from inside `off-nutrition-table-extractor` folder.
 
